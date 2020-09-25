@@ -47,10 +47,19 @@ public class CustomView extends View {
         this.angle = angle;
     }
 
+    /**
+     * 该方法只能创建对象
+     * @param context
+     */
     public CustomView(Context context) {
         super(context);
     }
 
+    /**
+     * 至少要实现两个构造方法，该方法可以实现自定义属性
+     * @param context
+     * @param attrs
+     */
     public CustomView(Context context, AttributeSet attrs) {
         super(context, attrs);
 
@@ -94,7 +103,7 @@ public class CustomView extends View {
         if(attrs != null){
 
             TypedArray typedArray = context.obtainStyledAttributes(attrs,R.styleable.CustomView);
-            radius = typedArray.getDimension(R.styleable.CustomView_radius, defaultRadius);
+            radius = typedArray.getDimension(R.styleable.CustomView_radius, defaultRadius);//相当于float类型
             color = typedArray.getColor(R.styleable.CustomView_centerColor, Color.BLUE);
             shape = typedArray.getInt(R.styleable.CustomView_shape, 0);
 
@@ -118,6 +127,7 @@ public class CustomView extends View {
         int wSize = MeasureSpec.getSize(widthMeasureSpec); //屏幕宽：720
         int hSize = MeasureSpec.getSize(heightMeasureSpec); //屏幕高：1024
 
+        Log.d("amy", "onMeasure: "+wSize+"===="+hSize);
         //At_most代表Wrap_content属性值  EXACTLY代表MatchParent或xxxdp
         if(wMode == MeasureSpec.AT_MOST && hMode == MeasureSpec.AT_MOST){
             setMeasuredDimension(defaultWidth,defaultHeight);
@@ -141,6 +151,7 @@ public class CustomView extends View {
     @Override
     protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
         super.onLayout(changed, left, top, right, bottom);
+
     }
 
     /**
@@ -174,10 +185,7 @@ public class CustomView extends View {
             animation.setRepeatCount(-1);//重复一直转
             animation.setInterpolator(new LinearInterpolator());//匀速
             this.startAnimation(animation);
-
-
         }
-
         return super.onTouchEvent(event);
     }
 }

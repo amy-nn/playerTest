@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main5Activity"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_translate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="补间动画-平移"/>
+    <Button
+        android:id="@+id/btn_rotate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="补间动画-旋转"/>
+    <Button
+        android:id="@+id/btn_scale"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="补间动画-缩放"/>
+    <Button
+        android:id="@+id/btn_alpha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="补间动画-透明"/>
+    <Button
+        android:id="@+id/btn_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="补间动画-组合动画"/>
+    <Button
+        android:id="@+id/btn_vAnimTranslate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="属性动画-平移"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开启动画"
+            android:onClick="startAnim"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="结束动画"
+            android:onClick="stopAnim"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/image_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/image10"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

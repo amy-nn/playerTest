@@ -6,4 +6,9 @@
         <attr name="shape" format="integer"/>
     </declare-styleable>
 
+    <declare-styleable name="MyView">
+        <attr name="allAngle" format="integer"></attr>
+        <attr name="rotateAngle" format="integer"/>
+        <attr name="paintWidth" format="dimension"/>
+    </declare-styleable>
 </resources>

@@ -8,8 +8,8 @@
 
     <com.example.playertest.CustomView
         android:id="@+id/custom_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="500dp"
+        android:layout_height="400dp"
         app:centerColor="@android:color/holo_green_dark"
         app:radius="150dp"
         app:shape="1"/>
